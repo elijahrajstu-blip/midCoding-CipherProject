@@ -4,14 +4,14 @@ encoded = ""
 
 for char in message:
     if char.isalpha():
-        
+       
         start = ord('A') if char.isupper() else ord('a')
         
-        
-        new_char = chr((ord(char) - start - shift) % 26 + start)
+        shiftValue = start - shift
+        new_char = chr(shiftValue)
         encoded += new_char
     else:
-        
+       
         encoded += char
 
 print("Encoded message:", encoded)
