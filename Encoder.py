@@ -1,4 +1,8 @@
-choice = input("encode or decode?")
+
+with open("filename.txt", "r") as file:
+    content = file.read()
+    print(content)
+    choice = input("encode or decode?")
 if choice == "encode":
     message = input("Enter your message: ")
     shift = int(input("Enter the shift number: "))
